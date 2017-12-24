@@ -16,8 +16,10 @@ public class TestUtilJavxer {
     private String stringTestFirstUppercase = "diego";
 
     // Test abbreviateName
-    private String resultAbbreviateName = "Kevin S G";
+    private int max_length = 9;
+    private String resultAbbreviateName = "Kevin S. G.";
     private String stringAbbreviateName = "Kevin smith garcias";
+    private String stringLowerCaseAbbreviateName = "kevin smith garcias";
 
 	@Before
 	public void setUp(){
@@ -41,6 +43,11 @@ public class TestUtilJavxer {
 
     @Test
     public void testAbbreviateName() {
-        assertEquals( resultAbbreviateName, utilities.abbreviateName( stringAbbreviateName, 9 ) );
+        assertEquals( resultAbbreviateName, utilities.abbreviateName( stringAbbreviateName, max_length ) );
+    }
+
+    @Test
+    public void testAbbreviateNameWithAllLowerCase() {
+        assertEquals( resultAbbreviateName, utilities.abbreviateName( stringLowerCaseAbbreviateName, max_length ) );
     }
 }

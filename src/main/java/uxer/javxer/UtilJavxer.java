@@ -15,7 +15,6 @@ public class UtilJavxer {
         } else {
 
             return text;
-
         }
     }
 
@@ -32,7 +31,6 @@ public class UtilJavxer {
         } else {
 
             return name;
-
         }
     }
 
@@ -41,9 +39,12 @@ public class UtilJavxer {
         StringBuilder builder = new StringBuilder();
 
         for ( String contents : array ) {
+
             if (builder.length() > 0) {
+
                     builder.append(" ");
             }
+
             builder.append( capitalizeFirstLetter( contents ) );
         }
 

@@ -5,11 +5,11 @@ import static org.junit.Assert.*;
 
 public class TestUtilJavxer {
 
-	private UtilJavxer utilities;
+    private UtilJavxer utilities;
 
-	//Test ifHasSomeNumber
-	private String stringWithoutNumber = "Another String";
-	private String stringWithNumber = "An0th3r Str1ng";
+    //Test ifHasSomeNumber
+    private String stringWithoutNumber = "Another String";
+    private String stringWithNumber = "An0th3r Str1ng";
 
     //Test capitalizeFirstLetter
     private String resultTestFirstUppercase = "Diego";
@@ -21,10 +21,10 @@ public class TestUtilJavxer {
     private String stringAbbreviateName = "Kevin smith garcias";
     private String stringLowerCaseAbbreviateName = "kevin smith garcias";
 
-	@Before
-	public void setUp(){
-		utilities = new UtilJavxer();
-	}
+    @Before
+    public void setUp(){
+        utilities = new UtilJavxer();
+    }
 
     @Test
     public void testifHasSomeNumberExpectFalse() {
@@ -33,7 +33,7 @@ public class TestUtilJavxer {
 
     @Test
     public void testifHasSomeNumberExpectTrue() {
-    	assertTrue( utilities.ifHasSomeNumber( stringWithNumber ) );
+        assertTrue( utilities.ifHasSomeNumber( stringWithNumber ) );
     }
 
     @Test

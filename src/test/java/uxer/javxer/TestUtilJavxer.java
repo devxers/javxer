@@ -29,8 +29,8 @@ public class TestUtilJavxer {
         assertTrue( utilities.ifHasSomeNumber( stringWithNumber ) );
     }
 
-    @Test
-    public void testIfIsAEmail() {
-        assertTrue( utilities.ifIsAEmail( aValidEmail ) );
-    }
+    // @Test
+    // public void testIfIsAEmail() {
+    //     assertTrue( utilities.ifIsAEmail( aValidEmail ) );
+    // }
 }

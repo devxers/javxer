@@ -11,15 +11,8 @@ public class TestUtilJavxer {
     private String stringWithoutNumber = "Another String";
     private String stringWithNumber = "An0th3r Str1ng";
 
-    //Test capitalizeFirstLetter
-    private String resultTestFirstUppercase = "Diego";
-    private String stringTestFirstUppercase = "diego";
-
-    // Test abbreviateName
-    private int max_length = 9;
-    private String resultAbbreviateName = "Kevin S. G.";
-    private String stringAbbreviateName = "Kevin smith garcias";
-    private String stringLowerCaseAbbreviateName = "kevin smith garcias";
+    // Test ifIsAEmail
+    private String aValidEmail = "somename125_8!@somedomain.com";
 
     @Before
     public void setUp(){
@@ -27,27 +20,17 @@ public class TestUtilJavxer {
     }
 
     @Test
-    public void testifHasSomeNumberExpectFalse() {
+    public void testIfHasSomeNumberExpectFalse() {
         assertFalse( utilities.ifHasSomeNumber( stringWithoutNumber ) );
     }
 
     @Test
-    public void testifHasSomeNumberExpectTrue() {
+    public void testIfHasSomeNumberExpectTrue() {
         assertTrue( utilities.ifHasSomeNumber( stringWithNumber ) );
     }
 
-    @Test
-    public void testCapitalizeFirstLetter() {
-        assertEquals( resultTestFirstUppercase, utilities.capitalizeFirstLetter( stringTestFirstUppercase ) );
-    }
-
-    @Test
-    public void testAbbreviateName() {
-        assertEquals( resultAbbreviateName, utilities.abbreviateName( stringAbbreviateName, max_length ) );
-    }
-
-    @Test
-    public void testAbbreviateNameWithAllLowerCase() {
-        assertEquals( resultAbbreviateName, utilities.abbreviateName( stringLowerCaseAbbreviateName, max_length ) );
-    }
+    // @Test
+    // public void testIfIsAEmail() {
+    //     assertTrue( utilities.ifIsAEmail( aValidEmail ) );
+    // }
 }

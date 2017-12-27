@@ -11,8 +11,11 @@ public class TestUtilJavxer {
     private String stringWithoutNumber = "Another String";
     private String stringWithNumber = "An0th3r Str1ng";
 
-    // Test ifIsAEmail
+    // Test ifIsAnEmail
     private String aValidEmail = "somename125_8!@somedomain.com";
+    private String anEmailWithDotAtBeginning = ".another_email@domain.com";
+    private String anEmailWithCommaAtBeginning = ",simpleemail@another.com";
+    private String anInvalidEmail = "someelse@domain";
 
     @Before
     public void setUp(){
@@ -29,8 +32,23 @@ public class TestUtilJavxer {
         assertTrue( utilities.ifHasSomeNumber( stringWithNumber ) );
     }
 
-    // @Test
-    // public void testIfIsAEmail() {
-    //     assertTrue( utilities.ifIsAEmail( aValidEmail ) );
-    // }
+    @Test
+    public void testIfIsAnEmail() {
+        assertTrue( utilities.ifIsAnEmail( aValidEmail ) );
+    }
+
+    @Test
+    public void testIfIsAnEmailWithDotAtBeginning() {
+        assertFalse( utilities.ifIsAnEmail( anEmailWithDotAtBeginning ) );
+    }
+
+    @Test
+    public void testIfIsAnEmailWithCommaAtBeginning() {
+        assertFalse( utilities.ifIsAnEmail( anEmailWithCommaAtBeginning ) );
+    }
+
+    @Test
+    public void testIfIsAnEmailExpectFalse() {
+        assertFalse( utilities.ifIsAnEmail( anInvalidEmail ) );
+    }
 }

@@ -30,7 +30,7 @@ public class TestUtilJavxer {
     }
 
     @Test
-    public void testIfIsAEmail() {
-        assertTrue( utilities.ifIsAEmail( aValidEmail ) );
+    public void testIfIsAnEmail() {
+        assertTrue( utilities.ifIsAnEmail( aValidEmail ) );
     }
 }

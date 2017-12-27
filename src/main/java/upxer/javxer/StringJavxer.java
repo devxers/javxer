@@ -1,10 +1,6 @@
-package uxer.javxer;
-import java.util.regex.Pattern;
-public class UtilJavxer {
+package upxer.javxer;
 
-    public boolean ifHasSomeNumber( String text ) {
-        return text.matches( ".*\\d.*" );
-    }
+public class StringJavxer {
 
     public String capitalizeFirstLetter( String text ) {
 

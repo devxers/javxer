@@ -18,8 +18,8 @@ public class TestStringJavxer {
     private String stringAbbreviateName = "Kevin smith garcias";
     private String stringLowerCaseAbbreviateName = "kevin smith garcias";
 
-    // Test removeDoubleSpace()
-    private String resultRemoveDoubleSpace = "some text that has double spaces";
+    // Test removeDoubleSpaces()
+    private String resultRemoveDoubleSpaces = "some text that has double spaces";
     private String aStringWithDoubleSpaces = "some    text  that has   double      spaces";
 
 
@@ -44,7 +44,7 @@ public class TestStringJavxer {
     }
 
     @Test
-    public vois testRemoveDoubleSpace() {
-        assertEquals( resultRemoveDoubleSpace, javxer.removeDoubleSpace( aStringWithDoubleSpace ) );
+    public void testRemoveDoubleSpaces() {
+        assertEquals( resultRemoveDoubleSpaces, javxer.removeDoubleSpaces( aStringWithDoubleSpaces ) );
     }
 }

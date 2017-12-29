@@ -8,15 +8,20 @@ public class TestStringJavxer {
     // SetUp
     private StringJavxer javxer;
 
-    //Test capitalizeFirstLetter
+    //Test capitalizeFirstLetter()
     private String resultTestFirstUppercase = "Diego";
     private String stringTestFirstUppercase = "diego";
 
-    // Test abbreviateName
+    // Test abbreviateName()
     private int max_length = 9;
     private String resultAbbreviateName = "Kevin S. G.";
     private String stringAbbreviateName = "Kevin smith garcias";
     private String stringLowerCaseAbbreviateName = "kevin smith garcias";
+
+    // Test removeDoubleSpace()
+    private String resultRemoveDoubleSpace = "some text that has double spaces";
+    private String aStringWithDoubleSpaces = "some    text  that has   double      spaces";
+
 
     @Before
     public void setUp() {
@@ -36,5 +41,10 @@ public class TestStringJavxer {
     @Test
     public void testAbbreviateNameWithAllLowerCase() {
         assertEquals( resultAbbreviateName, javxer.abbreviateName( stringLowerCaseAbbreviateName, max_length ) );
+    }
+
+    @Test
+    public vois testRemoveDoubleSpace() {
+        assertEquals( resultRemoveDoubleSpace, javxer.removeDoubleSpace( aStringWithDoubleSpace ) );
     }
 }

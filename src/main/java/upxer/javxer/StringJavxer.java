@@ -4,7 +4,7 @@ public class StringJavxer {
 
     public String capitalizeFirstLetter( String text ) {
 
-        if( !text.matches( "^[A-Z]" ) ) {
+        if( text.matches( ".*^[^A-Z].*" ) ) {
 
             return text.substring(0, 1).toUpperCase() + text.substring(1);
 
@@ -27,6 +27,18 @@ public class StringJavxer {
         } else {
 
             return name;
+        }
+    }
+
+    public String removeDoubleSpaces( String text ) {
+
+        if( text.matches( ".*\\s{2,}.*" ) ) {
+
+            return text.replaceAll( "\\s{2,}", " " );
+
+        } else {
+
+            return text;
         }
     }
 

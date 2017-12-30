@@ -5,9 +5,7 @@ install:
 
 jdk:
   - oraclejdk8
-  - oraclejdk8
   - oraclejdk9
-  - openjdk7
 
 after_success:
   - gradlew cobertura coveralls

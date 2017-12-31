@@ -14,6 +14,18 @@ public class StringJavxer {
         }
     }
 
+    public String capitalizeName( String name ) {
+
+        if( name.matches( ".*\\b[^\\s^A-Z].*" ) ) {
+
+            return convertArrayToStringAndCapitalizeTheContents( name.split( "\\s+" ) );
+
+        } else {
+
+            return name;
+        }
+    }
+
     public String abbreviateName( String name, int maxLength ) {
 
         if( name.length() >= maxLength ) {
@@ -53,7 +65,7 @@ public class StringJavxer {
                     builder.append(" ");
             }
 
-            builder.append( capitalizeFirstLetter( contents ) );
+            builder.append( capitalizeFirstLetter( contents.toLowerCase() ) );
         }
 
         return builder.toString();

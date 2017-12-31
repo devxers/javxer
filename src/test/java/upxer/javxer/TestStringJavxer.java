@@ -15,6 +15,7 @@ public class TestStringJavxer {
     //Test capitalizeName()
     private String resultTestCapitalizeName = "Lady Richy June";
     private String stringWithoutCapitalizeStyle = "lady richy june";
+    private String stringtWithUpperCasesBetweenLetters = "laDy riChy JunE";
 
     // Test abbreviateName()
     private int max_length = 9;
@@ -44,6 +45,11 @@ public class TestStringJavxer {
     @Test
     public void testCapitalizeName() {
         assertEquals( resultTestCapitalizeName, javxer.capitalizeName( stringWithoutCapitalizeStyle ) );
+    }
+
+    @Test
+    public void testCapitalizeNameWithUpperCases() {
+        assertEquals( resultTestCapitalizeName, javxer.capitalizeName( stringtWithUpperCasesBetweenLetters ) );
     }
 
     @Test

@@ -8,7 +8,12 @@ public class UtilJavxer {
         return text.matches( ".*\\d.*" );
     }
 
+    public boolean ifHasSomeLetter( String text ) {
+        return text.matches( ".*[A-z].*" );
+    }
+
     public boolean ifIsAnEmail( String text ) {
         return text.matches( "^[^\\.,,][\\w+!]+@(?:[A-z0-9]+\\.)+[A-z]{1,6}$" );
     }
+
 }

@@ -65,7 +65,7 @@ public class StringJavxer {
                     builder.append(" ");
             }
 
-            builder.append( capitalizeFirstLetter( contents ) );
+            builder.append( capitalizeFirstLetter( contents.toLowerCase() ) );
         }
 
         return builder.toString();

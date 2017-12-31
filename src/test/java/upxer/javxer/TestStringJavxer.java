@@ -18,6 +18,10 @@ public class TestStringJavxer {
     private String stringAbbreviateName = "Kevin smith garcias";
     private String stringLowerCaseAbbreviateName = "kevin smith garcias";
 
+    private int anotherMaxLenght = 25;
+    private String resultUnAbbreviateName = "rose sib house";
+    private String stringLowerCaseUnAbbreviateName = "rose sib house";
+
     // Test removeDoubleSpaces()
     private String resultRemoveDoubleSpaces = "some text that has double spaces";
     private String aStringWithDoubleSpaces = "some    text  that has   double      spaces";
@@ -41,6 +45,11 @@ public class TestStringJavxer {
     @Test
     public void testAbbreviateNameWithAllLowerCase() {
         assertEquals( resultAbbreviateName, javxer.abbreviateName( stringLowerCaseAbbreviateName, max_length ) );
+    }
+
+    @Test
+    public void testUnAbbreviateName() {
+        assertEquals( resultUnAbbreviateName, javxer.abbreviateName( stringLowerCaseUnAbbreviateName, anotherMaxLenght ) );
     }
 
     @Test

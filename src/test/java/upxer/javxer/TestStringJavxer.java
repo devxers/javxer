@@ -8,16 +8,16 @@ public class TestStringJavxer {
     // SetUp
     private StringJavxer javxer;
 
-    //Test capitalizeFirstLetter()
+    // Variables Tests capitalizeFirstLetter()
     private String resultTestFirstUppercase = "Diego";
     private String stringTestFirstUppercase = "diego";
 
-    //Test capitalizeName()
+    // Variables Tests capitalizeName()
     private String resultTestCapitalizeName = "Lady Richy June";
     private String stringWithoutCapitalizeStyle = "lady richy june";
     private String stringtWithUpperCasesBetweenLetters = "laDy riChy JunE";
 
-    // Test abbreviateName()
+    // Variables Tests abbreviateName()
     private int max_length = 9;
     private String resultAbbreviateName = "Kevin S. G.";
     private String stringAbbreviateName = "Kevin smith garcias";
@@ -27,7 +27,7 @@ public class TestStringJavxer {
     private String resultUnAbbreviateName = "rose sib house";
     private String stringLowerCaseUnAbbreviateName = "rose sib house";
 
-    // Test removeDoubleSpaces()
+    // Variables Tests removeDoubleSpaces()
     private String resultRemoveDoubleSpaces = "some text that has double spaces";
     private String aStringWithDoubleSpaces = "some    text  that has   double      spaces";
 
@@ -58,13 +58,13 @@ public class TestStringJavxer {
     }
 
     @Test
-    public void testAbbreviateNameWithAllLowerCase() {
-        assertEquals( resultAbbreviateName, javxer.abbreviateName( stringLowerCaseAbbreviateName, max_length ) );
+    public void testUnAbbreviateName() {
+        assertEquals( resultUnAbbreviateName, javxer.abbreviateName( stringLowerCaseUnAbbreviateName, anotherMaxLenght ) );
     }
 
     @Test
-    public void testUnAbbreviateName() {
-        assertEquals( resultUnAbbreviateName, javxer.abbreviateName( stringLowerCaseUnAbbreviateName, anotherMaxLenght ) );
+    public void testAbbreviateNameWithAllLowerCase() {
+        assertEquals( resultAbbreviateName, javxer.abbreviateName( stringLowerCaseAbbreviateName, max_length ) );
     }
 
     @Test

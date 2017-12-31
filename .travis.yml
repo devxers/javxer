@@ -3,6 +3,13 @@ language: java
 install:
   - chmod +x gradlew
 
+jdk:
+  - oraclejdk8
+  - oraclejdk9
+
+after_success:
+  - ./gradlew cobertura coveralls
+
 notifications:
   email: false
 

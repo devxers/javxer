@@ -11,6 +11,11 @@ public class TestUtilJavxer {
     private String stringWithoutNumber = "Another String";
     private String stringWithNumber = "An0th3r Str1ng";
 
+    // Test ifHasSomeLetter
+    private String stringWithoutLetters = "79136895";
+    private String stringWithLetters = "5856A89";
+    private String anotherStringWithLetters = "58 A 596 B";
+
     // Test ifIsAnEmail
     private String aValidEmail = "somename125_8!@somedomain.com";
     private String anEmailWithDotAtBeginning = ".another_email@domain.com";
@@ -50,5 +55,20 @@ public class TestUtilJavxer {
     @Test
     public void testIfIsAnEmailExpectFalse() {
         assertFalse( utilities.ifIsAnEmail( anInvalidEmail ) );
+    }
+
+    @Test
+    public void testIfHasSomeLetterExpectFalse() {
+        assertFalse( utilities.ifHasSomeLetter( stringWithoutLetters ) );
+    }
+
+    @Test
+    public void testIfHasSomeLetterExpectTrue() {
+        assertTrue( utilities.ifHasSomeLetter( stringWithLetters ) );
+    }
+
+    @Test
+    public void testIfHasSomeLetterExpectTrueStringWithSpaces() {
+        assertTrue( utilities.ifHasSomeLetter( anotherStringWithLetters ) );
     }
 }
